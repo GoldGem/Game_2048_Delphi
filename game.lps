@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="2">
+      <Unit0>
+        <Filename Value="game.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="20"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="form_mainmenu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FormMainMenu"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="form_MainMenu"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="2"/>
+        <CursorPos X="58" Y="16"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+    </Units>
+    <JumpHistory Count="11" HistoryIndex="10">
+      <Position1>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="29" Column="31"/>
+      </Position1>
+      <Position2>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="30" Column="31"/>
+      </Position2>
+      <Position3>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="29" Column="31"/>
+      </Position3>
+      <Position4>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="30" Column="31"/>
+      </Position4>
+      <Position5>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="29" Column="31"/>
+      </Position5>
+      <Position6>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="31" Column="31"/>
+      </Position6>
+      <Position7>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="30" Column="31"/>
+      </Position7>
+      <Position8>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="31" Column="31"/>
+      </Position8>
+      <Position9>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="30" Column="31"/>
+      </Position9>
+      <Position10>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="31" Column="31"/>
+      </Position10>
+      <Position11>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="13" Column="57" TopLine="2"/>
+      </Position11>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
