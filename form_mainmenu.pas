@@ -56,47 +56,130 @@ end;
 procedure TFormMainMenu.StringGridMainKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 var
-   i,j:integer;
+   i,j,t,k:integer;
 begin
+  t:=0;
   if key = VK_RIGHT then
+  begin
   for i:=0 to 3 do
       for j:=0 to 3 do
-          if StringGridMain.Cells[i,j]<>'0' then
+
+          if (StringGridMain.Cells[i,j]<>'0') and (i<>3) then
           begin
-             StringGridMain.Cells[3,j]:='2';
-             if i<>3 then
-                StringGridMain.Cells[i,j]:='0';
-          end;
+               for k:=3 downto 0 do
+               begin
+                    if StringGridMain.Cells[k,j]='0' then
+                    begin
+                       StringGridMain.Cells[k,j]:=StringGridMain.Cells[i,j];
+                       if (i<>k) and (i<>3) then
+                         StringGridMain.Cells[i,j]:='0';
+                       //break
+                    end;
+               end;
+           end;
+               {while t<>1 do
+               begin
+                    i:=random(3);
+                    j:=random(3);
+                    if StringGridMain.Cells[i,j]='0' then
+                    begin
+                         StringGridMain.Cells[i,j]:='2';
+                         t:=1;
+                    end;
+               end;}
+
+
+  end;
   if key = VK_LEFT then
+  begin
   for i:=0 to 3 do
       for j:=0 to 3 do
-          if StringGridMain.Cells[i,j]<>'0' then
+
+          if (StringGridMain.Cells[i,j]<>'0') then
           begin
-             StringGridMain.Cells[0,j]:='2';
-             if i<>0 then
-                StringGridMain.Cells[i,j]:='0';
-          end;
+               for k:=0 to 3 do
+               begin
+                    if StringGridMain.Cells[i,k]='0' then
+                    begin
+                       StringGridMain.Cells[i,k]:=StringGridMain.Cells[i,j];
+                       if (i<>k) and (i<>0) then
+                         StringGridMain.Cells[i,j]:='0';
+                       //break
+                    end;
+               end;
+           end;
+          {while t<>1 do
+          begin
+               i:=random(3);
+               j:=random(3);
+               if StringGridMain.Cells[i,j]<>'2' then
+               begin
+                  StringGridMain.Cells[i,j]:='0';
+                  t:=1;
+               end;
+          end;}
+  end;
+
   if key = VK_UP then
+  begin
   for i:=0 to 3 do
       for j:=0 to 3 do
-          if StringGridMain.Cells[i,j]<>'0' then
+
+          if (StringGridMain.Cells[i,j]<>'0') then
           begin
-             StringGridMain.Cells[i,0]:='2';
-             if j<>0 then
-                StringGridMain.Cells[i,j]:='0';
-          end;
+               for k:=0 to 3 do
+               begin
+                    if StringGridMain.Cells[k,j]='0' then
+                    begin
+                       StringGridMain.Cells[k,j]:=StringGridMain.Cells[i,j];
+                       if (j<>k) and (j<>0) then
+                         StringGridMain.Cells[i,j]:='0';
+                       //break
+                    end;
+               end;
+           end;
+          {while t<>1 do
+          begin
+               i:=random(3);
+               j:=random(3);
+               if StringGridMain.Cells[i,j]='0' then
+               begin
+                  StringGridMain.Cells[i,j]:='2';
+                  t:=1;
+               end;
+          end;}
+  end;
+
   if key = VK_DOWN then
+  begin
   for i:=0 to 3 do
       for j:=0 to 3 do
-          if StringGridMain.Cells[i,j]<>'0' then
+
+          if (StringGridMain.Cells[i,j]<>'0') and (j<>3) then
           begin
-             StringGridMain.Cells[i,3]:='2';
-             if j<>3 then
-                StringGridMain.Cells[i,j]:='0';
-          end;
+               for k:=3 downto 0 do
+               begin
+                    if StringGridMain.Cells[i,k]='0' then
+                    begin
+                       StringGridMain.Cells[i,k]:=StringGridMain.Cells[i,j];
+                       if (j<>k) and (j<>3) then
+                         StringGridMain.Cells[i,j]:='0';
+                       //break
+                    end;
+               end;
+           end;
+          {while t<>1 do
+          begin
+               i:=random(3);
+               j:=random(3);
+               if StringGridMain.Cells[i,j]='0' then
+               begin
+                  StringGridMain.Cells[i,j]:='2';
+                  t:=1;
+               end;
+          end};
+  end;
 end;
-
-
 
 procedure TFormMainMenu.ExitBtnClick(Sender: TObject);
 begin

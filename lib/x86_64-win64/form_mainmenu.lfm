@@ -1,18 +1,18 @@
 object FormMainMenu: TFormMainMenu
-  Left = 281
-  Height = 597
-  Top = 108
-  Width = 514
+  Left = 346
+  Height = 534
+  Top = 170
+  Width = 513
   Caption = 'FormMainMenu'
-  ClientHeight = 577
-  ClientWidth = 514
+  ClientHeight = 514
+  ClientWidth = 513
   Menu = MainMenuMain
   OnCreate = FormCreate
   LCLVersion = '1.6.0.4'
   object StringGridMain: TStringGrid
     Left = 0
     Height = 520
-    Top = 64
+    Top = 0
     Width = 520
     ColCount = 4
     DefaultColWidth = 128
