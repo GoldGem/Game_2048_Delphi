@@ -1,15 +1,16 @@
 object FormMainMenu: TFormMainMenu
-  Left = 429
-  Height = 578
-  Top = 28
-  Width = 499
+  Left = 250
+  Height = 597
+  Top = 59
+  Width = 514
   Caption = 'FormMainMenu'
-  ClientHeight = 558
-  ClientWidth = 499
+  ClientHeight = 577
+  ClientWidth = 514
   Menu = MainMenuMain
+  OnCreate = FormCreate
   LCLVersion = '1.6.0.4'
-  object StringGrid1: TStringGrid
-    Left = -16
+  object StringGridMain: TStringGrid
+    Left = 0
     Height = 520
     Top = 64
     Width = 520
@@ -18,8 +19,12 @@ object FormMainMenu: TFormMainMenu
     DefaultRowHeight = 128
     FixedCols = 0
     FixedRows = 0
+    Font.Height = -27
+    ParentFont = False
     RowCount = 4
     TabOrder = 0
+    TitleFont.Height = -27
+    OnKeyDown = StringGridMainKeyDown
   end
   object MainMenuMain: TMainMenu
     left = 376
@@ -32,6 +37,7 @@ object FormMainMenu: TFormMainMenu
     end
     object ExitBtn: TMenuItem
       Caption = 'Выход'
+      OnClick = ExitBtnClick
     end
   end
 end

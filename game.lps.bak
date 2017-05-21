@@ -12,20 +12,128 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="22"/>
       </Unit0>
       <Unit1>
         <Filename Value="form_mainmenu.pas"/>
         <IsPartOfProject Value="True"/>
-        <ComponentName Value="Form1"/>
+        <ComponentName Value="FormMainMenu"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="form_MainMenu"/>
         <IsVisibleTab Value="True"/>
-        <UsageCount Value="20"/>
+        <TopLine Value="54"/>
+        <CursorPos X="18" Y="68"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="26" HistoryIndex="25">
+      <Position1>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="29" Column="31"/>
+      </Position1>
+      <Position2>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="30" Column="31"/>
+      </Position2>
+      <Position3>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="29" Column="31"/>
+      </Position3>
+      <Position4>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="30" Column="31"/>
+      </Position4>
+      <Position5>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="29" Column="31"/>
+      </Position5>
+      <Position6>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="31" Column="31"/>
+      </Position6>
+      <Position7>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="30" Column="31"/>
+      </Position7>
+      <Position8>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="31" Column="31"/>
+      </Position8>
+      <Position9>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="30" Column="31"/>
+      </Position9>
+      <Position10>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="31" Column="31"/>
+      </Position10>
+      <Position11>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="13" Column="57" TopLine="2"/>
+      </Position11>
+      <Position12>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="7" Column="30"/>
+      </Position12>
+      <Position13>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="39" TopLine="20"/>
+      </Position13>
+      <Position14>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="47" Column="24" TopLine="34"/>
+      </Position14>
+      <Position15>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="33" TopLine="30"/>
+      </Position15>
+      <Position16>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="56" Column="6" TopLine="41"/>
+      </Position16>
+      <Position17>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="55" Column="17" TopLine="42"/>
+      </Position17>
+      <Position18>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="32" TopLine="32"/>
+      </Position18>
+      <Position19>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="54" Column="12" TopLine="40"/>
+      </Position19>
+      <Position20>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="53" Column="60" TopLine="40"/>
+      </Position20>
+      <Position21>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="54" Column="16" TopLine="40"/>
+      </Position21>
+      <Position22>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="56" Column="13" TopLine="42"/>
+      </Position22>
+      <Position23>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="25" Column="4" TopLine="6"/>
+      </Position23>
+      <Position24>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="9" Column="27" TopLine="40"/>
+      </Position24>
+      <Position25>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="67" Column="45" TopLine="52"/>
+      </Position25>
+      <Position26>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="64" Column="44" TopLine="52"/>
+      </Position26>
+    </JumpHistory>
   </ProjectSession>
 </CONFIG>

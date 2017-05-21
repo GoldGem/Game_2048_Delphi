@@ -42,6 +42,7 @@
         <Filename Value="form_mainmenu.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormMainMenu"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="form_MainMenu"/>
       </Unit1>
