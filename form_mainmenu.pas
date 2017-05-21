@@ -64,8 +64,35 @@ begin
           if StringGridMain.Cells[i,j]<>'0' then
           begin
              StringGridMain.Cells[3,j]:='2';
-             //if i<>4 then
-               // StringGridMain.Cells[i,j]:='0';
+             if i<>3 then
+                StringGridMain.Cells[i,j]:='0';
+          end;
+  if key = VK_LEFT then
+  for i:=0 to 3 do
+      for j:=0 to 3 do
+          if StringGridMain.Cells[i,j]<>'0' then
+          begin
+             StringGridMain.Cells[0,j]:='2';
+             if i<>0 then
+                StringGridMain.Cells[i,j]:='0';
+          end;
+  if key = VK_UP then
+  for i:=0 to 3 do
+      for j:=0 to 3 do
+          if StringGridMain.Cells[i,j]<>'0' then
+          begin
+             StringGridMain.Cells[i,0]:='2';
+             if j<>0 then
+                StringGridMain.Cells[i,j]:='0';
+          end;
+  if key = VK_DOWN then
+  for i:=0 to 3 do
+      for j:=0 to 3 do
+          if StringGridMain.Cells[i,j]<>'0' then
+          begin
+             StringGridMain.Cells[i,3]:='2';
+             if j<>3 then
+                StringGridMain.Cells[i,j]:='0';
           end;
 end;
 

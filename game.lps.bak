@@ -22,14 +22,14 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="form_MainMenu"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="54"/>
-        <CursorPos X="18" Y="68"/>
+        <TopLine Value="56"/>
+        <CursorPos X="17" Y="79"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
     </Units>
-    <JumpHistory Count="26" HistoryIndex="25">
+    <JumpHistory Count="27" HistoryIndex="26">
       <Position1>
         <Filename Value="form_mainmenu.pas"/>
         <Caret Line="29" Column="31"/>
@@ -124,16 +124,20 @@
       </Position23>
       <Position24>
         <Filename Value="form_mainmenu.pas"/>
-        <Caret Line="9" Column="27" TopLine="40"/>
+        <Caret Line="67" Column="45" TopLine="52"/>
       </Position24>
       <Position25>
         <Filename Value="form_mainmenu.pas"/>
-        <Caret Line="67" Column="45" TopLine="52"/>
+        <Caret Line="64" Column="44" TopLine="52"/>
       </Position25>
       <Position26>
         <Filename Value="form_mainmenu.pas"/>
-        <Caret Line="64" Column="44" TopLine="52"/>
+        <Caret Line="94" Column="18" TopLine="55"/>
       </Position26>
+      <Position27>
+        <Filename Value="form_mainmenu.pas"/>
+        <Caret Line="88" Column="19" TopLine="58"/>
+      </Position27>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
