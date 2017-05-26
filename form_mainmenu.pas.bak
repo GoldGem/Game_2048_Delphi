@@ -76,6 +76,10 @@ begin
           begin
                for k:=3 downto i+1 do
                begin
+                    if (StringGridMain.Cells[k,j]=StringGridMain.Cells[i,j])
+                    and  (StringGridMain.Cells[k-1,j]='0') then
+                    StringGridMain.Cells[k,j]:=inttostr(strtoint(StringGridMain.Cells[k,j])*2)
+                    else
                     if StringGridMain.Cells[k,j]='0' then
                     begin
                        StringGridMain.Cells[k,j]:=StringGridMain.Cells[i,j];
@@ -107,6 +111,10 @@ begin
           begin
                for k:=0 to i-1 do
                begin
+                    if (StringGridMain.Cells[k,j]=StringGridMain.Cells[i,j])
+                    and  (StringGridMain.Cells[k+1,j]='0') then
+                    StringGridMain.Cells[k,j]:=inttostr(strtoint(StringGridMain.Cells[k,j])*2)
+                    else
                     if StringGridMain.Cells[k,j]='0' then
                     begin
                        StringGridMain.Cells[k,j]:=StringGridMain.Cells[i,j];
@@ -138,6 +146,10 @@ begin
           begin
                for k:=0 to j-1 do
                begin
+                    if (StringGridMain.Cells[i,k]=StringGridMain.Cells[i,j])
+                    and  (StringGridMain.Cells[i,k+1]='0') then
+                    StringGridMain.Cells[i,k]:=inttostr(strtoint(StringGridMain.Cells[i,k])*2)
+                    else
                     if StringGridMain.Cells[i,k]='0' then
                     begin
                        StringGridMain.Cells[i,k]:=StringGridMain.Cells[i,j];
@@ -169,6 +181,10 @@ begin
           begin
                for k:=3 downto j+1 do
                begin
+                    if (StringGridMain.Cells[i,k]=StringGridMain.Cells[i,j])
+                    and  (StringGridMain.Cells[i,k-1]='0') then
+                    StringGridMain.Cells[i,k]:=inttostr(strtoint(StringGridMain.Cells[i,k])*2)
+                    else
                     if StringGridMain.Cells[i,k]='0' then
                     begin
                        StringGridMain.Cells[i,k]:=StringGridMain.Cells[i,j];

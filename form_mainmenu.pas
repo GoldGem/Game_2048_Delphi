@@ -76,7 +76,6 @@ begin
           begin
                for k:=3 downto i+1 do
                begin
-
                     if StringGridMain.Cells[k,j]='0' then
                     begin
                        StringGridMain.Cells[k,j]:=StringGridMain.Cells[i,j];
