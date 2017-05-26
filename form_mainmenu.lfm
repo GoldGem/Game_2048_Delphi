@@ -1,14 +1,14 @@
 object FormMainMenu: TFormMainMenu
-  Left = 346
+  Left = 277
   Height = 534
-  Top = 170
+  Top = 119
   Width = 513
   Caption = 'FormMainMenu'
   ClientHeight = 514
   ClientWidth = 513
   Menu = MainMenuMain
   OnCreate = FormCreate
-  LCLVersion = '1.6.0.4'
+  LCLVersion = '1.6.4.0'
   object StringGridMain: TStringGrid
     Left = 0
     Height = 520
@@ -35,10 +35,15 @@ object FormMainMenu: TFormMainMenu
     end
     object GameModeBtn: TMenuItem
       Caption = 'Выбор режима'
+      OnClick = GameModeBtnClick
     end
     object ExitBtn: TMenuItem
       Caption = 'Выход'
       OnClick = ExitBtnClick
+    end
+    object AboutBTN: TMenuItem
+      Caption = 'Справка'
+      OnClick = AboutBTNClick
     end
   end
 end

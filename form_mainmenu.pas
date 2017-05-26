@@ -16,10 +16,13 @@ type
     MainMenuMain: TMainMenu;
     GameModeBtn: TMenuItem;
     ExitBtn: TMenuItem;
+    AboutBTN: TMenuItem;
     NewGameBtn: TMenuItem;
     StringGridMain: TStringGrid;
+    procedure AboutBTNClick(Sender: TObject);
     procedure ExitBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure GameModeBtnClick(Sender: TObject);
     procedure StringGridMainDrawCell(Sender: TObject; aCol, aRow: Integer;
       aRect: TRect; aState: TGridDrawState);
     procedure StringGridMainKeyDown(Sender: TObject; var Key: Word;
@@ -36,6 +39,7 @@ var
 
 
 implementation
+     uses Unit2;
 
 {$R *.lfm}
 
@@ -53,6 +57,12 @@ begin
    j:=random(3);
    StringGridMain.Cells[i,j]:='2';
 
+end;
+
+procedure TFormMainMenu.GameModeBtnClick(Sender: TObject);
+begin
+  FormMainMenu.Hide;
+  FormMMenu.Show;
 end;
 
 procedure TFormMainMenu.StringGridMainDrawCell(Sender: TObject; aCol,
@@ -195,6 +205,11 @@ end;
 procedure TFormMainMenu.ExitBtnClick(Sender: TObject);
 begin
   Close;
+end;
+
+procedure TFormMainMenu.AboutBTNClick(Sender: TObject);
+begin
+    showmessage('Данное вот это что-то еще на стадии разработки. У нас кончилось время, деньги и мана.');
 end;
 
 end.
