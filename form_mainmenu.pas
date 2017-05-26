@@ -6,33 +6,25 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Grids,
-  ExtCtrls, Menus, StdCtrls, Unit1;
+  ExtCtrls, Menus, LCLType;
 
 type
 
   { TFormMainMenu }
 
   TFormMainMenu = class(TForm)
-    Btn2048: TButton;
-    Btn4096: TButton;
-    btnExit: TButton;
     MainMenuMain: TMainMenu;
     GameModeBtn: TMenuItem;
     ExitBtn: TMenuItem;
-    AboutBTN: TMenuItem;
     NewGameBtn: TMenuItem;
-    MainMenuPanel: TPanel;
-    StringGrid1: TStringGrid;
-    procedure AboutBTNClick(Sender: TObject);
-    procedure Btn2048Click(Sender: TObject);
-    procedure Btn4096Click(Sender: TObject);
-    procedure btnExitClick(Sender: TObject);
+    StringGridMain: TStringGrid;
     procedure ExitBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure GameModeBtnClick(Sender: TObject);
-    procedure MainMenuPanelClick(Sender: TObject);
-    procedure MenuItem1Click(Sender: TObject);
-    procedure NewGameBtnClick(Sender: TObject);
+    procedure StringGridMainDrawCell(Sender: TObject; aCol, aRow: Integer;
+      aRect: TRect; aState: TGridDrawState);
+    procedure StringGridMainKeyDown(Sender: TObject; var Key: Word;
+      Shift: TShiftState);
+
   private
     { private declarations }
   public
@@ -42,6 +34,7 @@ type
 var
   FormMainMenu: TFormMainMenu;
 
+
 implementation
 
 {$R *.lfm}
@@ -49,59 +42,159 @@ implementation
 { TFormMainMenu }
 
 procedure TFormMainMenu.FormCreate(Sender: TObject);
+var
+   i,j:integer;
 begin
-    NewGameBtn.Enabled:=False;
-    GameModeBtn.Enabled:=False;
+   randomize;
+   for i:=0 to 3 do
+       for j:=0 to 3 do
+           StringGridMain.Cells[i,j]:='0';
+   i:=random(3);
+   j:=random(3);
+   StringGridMain.Cells[i,j]:='2';
+
 end;
 
-procedure TFormMainMenu.GameModeBtnClick(Sender: TObject);
+procedure TFormMainMenu.StringGridMainDrawCell(Sender: TObject; aCol,
+  aRow: Integer; aRect: TRect; aState: TGridDrawState);
 begin
-  MainMenuPanel.Visible:=True;
-  NewGameBtn.Enabled:=False;
-  GameModeBtn.Enabled:=False;
+  StringGridMain.Canvas.DrawFocusRect(aRect);
 end;
 
-procedure TFormMainMenu.Btn2048Click(Sender: TObject);
+procedure TFormMainMenu.StringGridMainKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+var
+   i,j,t,k,x,y:integer;
 begin
-  GameModeBtn.Enabled:=True;
-  MainMenuPanel.Visible:=false;
-  NewGameBtn.Enabled:=True;
-end;
+  t:=0;
+  if key = VK_RIGHT then
+  begin
+  for i:=0 to 3 do
+      for j:=0 to 3 do
 
-procedure TFormMainMenu.Btn4096Click(Sender: TObject);
-begin
-  FormGame2.Show;
-  FormMainMenu.Hide;
-end;
+          if (StringGridMain.Cells[i,j]<>'0') and (i<>3) then
+          begin
+               for k:=3 downto i+1 do
+               begin
+                    if StringGridMain.Cells[k,j]='0' then
+                    begin
+                       StringGridMain.Cells[k,j]:=StringGridMain.Cells[i,j];
+                       if (i<>k) and (i<>3) then
+                         StringGridMain.Cells[i,j]:='0';
+                       //break
+                    end;
+               end;
 
-procedure TFormMainMenu.AboutBTNClick(Sender: TObject);
-begin
-  showmessage('Powered by ...');
-end;
+               while t<>1 do
+               begin
+                    x:=random(3);
+                    y:=random(3);
+                    if StringGridMain.Cells[x,y]='0' then
+                    begin
+                         StringGridMain.Cells[x,y]:='2';
+                         t:=1;
+                    end;
+               end;
+        end;
 
-procedure TFormMainMenu.btnExitClick(Sender: TObject);
-begin
-  Close;
+  end;
+  if key = VK_LEFT then
+  begin
+  for i:=0 to 3 do
+      for j:=0 to 3 do
+
+          if (StringGridMain.Cells[i,j]<>'0') and (i<>0) then
+          begin
+               for k:=0 to i-1 do
+               begin
+                    if StringGridMain.Cells[k,j]='0' then
+                    begin
+                       StringGridMain.Cells[k,j]:=StringGridMain.Cells[i,j];
+                       if (i<>k) and (i<>0) then
+                         StringGridMain.Cells[i,j]:='0';
+                       //break
+                    end;
+               end;
+
+          while t<>1 do
+               begin
+                    x:=random(3);
+                    y:=random(3);
+                    if StringGridMain.Cells[x,y]='0' then
+                    begin
+                         StringGridMain.Cells[x,y]:='2';
+                         t:=1;
+                    end;
+               end;
+      end;
+  end;
+
+  if key = VK_UP then
+  begin
+  for i:=0 to 3 do
+      for j:=0 to 3 do
+
+          if (StringGridMain.Cells[i,j]<>'0') and (j<>0) then
+          begin
+               for k:=0 to j-1 do
+               begin
+                    if StringGridMain.Cells[i,k]='0' then
+                    begin
+                       StringGridMain.Cells[i,k]:=StringGridMain.Cells[i,j];
+                       if (j<>k) and (j<>0) then
+                         StringGridMain.Cells[i,j]:='0';
+                       //break
+                    end;
+               end;
+
+          while t<>1 do
+               begin
+                    x:=random(3);
+                    y:=random(3);
+                    if StringGridMain.Cells[x,y]='0' then
+                    begin
+                         StringGridMain.Cells[x,y]:='2';
+                         t:=1;
+                    end;
+               end;
+      end;
+  end;
+
+  if key = VK_DOWN then
+  begin
+  for i:=0 to 3 do
+      for j:=0 to 3 do
+
+          if (StringGridMain.Cells[i,j]<>'0') and (j<>3) then
+          begin
+               for k:=3 downto j+1 do
+               begin
+                    if StringGridMain.Cells[i,k]='0' then
+                    begin
+                       StringGridMain.Cells[i,k]:=StringGridMain.Cells[i,j];
+                       if (j<>k) and (j<>3) then
+                         StringGridMain.Cells[i,j]:='0';
+                       //break
+                    end;
+               end;
+
+          while t<>1 do
+               begin
+                    x:=random(3);
+                    y:=random(3);
+                    if StringGridMain.Cells[x,y]='0' then
+                    begin
+                         StringGridMain.Cells[x,y]:='2';
+                         t:=1;
+                    end;
+               end;
+      end;
+  end;
 end;
 
 procedure TFormMainMenu.ExitBtnClick(Sender: TObject);
 begin
   Close;
-end;
-
-procedure TFormMainMenu.MainMenuPanelClick(Sender: TObject);
-begin
-  MainMenuPanel.Visible:=True;
-end;
-
-procedure TFormMainMenu.MenuItem1Click(Sender: TObject);
-begin
-
-end;
-
-procedure TFormMainMenu.NewGameBtnClick(Sender: TObject);
-begin
-
 end;
 
 end.

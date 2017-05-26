@@ -33,7 +33,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="3">
+    <Units Count="2">
       <Unit0>
         <Filename Value="game.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -46,13 +46,6 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="form_MainMenu"/>
       </Unit1>
-      <Unit2>
-        <Filename Value="unit1.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="FormGame2"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit1"/>
-      </Unit2>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

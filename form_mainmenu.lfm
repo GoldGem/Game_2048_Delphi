@@ -1,83 +1,44 @@
 object FormMainMenu: TFormMainMenu
-  Left = 156
-  Height = 578
-  Top = 64
-  Width = 504
+  Left = 346
+  Height = 534
+  Top = 170
+  Width = 513
   Caption = 'FormMainMenu'
-  ClientHeight = 558
-  ClientWidth = 504
+  ClientHeight = 514
+  ClientWidth = 513
   Menu = MainMenuMain
   OnCreate = FormCreate
   LCLVersion = '1.6.0.4'
-  object StringGrid1: TStringGrid
-    Left = -8
+  object StringGridMain: TStringGrid
+    Left = 0
     Height = 520
-    Top = 64
+    Top = 0
     Width = 520
     ColCount = 4
     DefaultColWidth = 128
     DefaultRowHeight = 128
     FixedCols = 0
     FixedRows = 0
+    Font.Height = -27
+    ParentFont = False
     RowCount = 4
     TabOrder = 0
-  end
-  object MainMenuPanel: TPanel
-    Left = 0
-    Height = 558
-    Top = 0
-    Width = 504
-    Align = alClient
-    ClientHeight = 558
-    ClientWidth = 504
-    TabOrder = 1
-    OnClick = MainMenuPanelClick
-    object Btn2048: TButton
-      Left = 160
-      Height = 65
-      Top = 80
-      Width = 163
-      Caption = '2048'
-      OnClick = Btn2048Click
-      TabOrder = 0
-    end
-    object Btn4096: TButton
-      Left = 160
-      Height = 65
-      Top = 216
-      Width = 163
-      Caption = '4096'
-      OnClick = Btn4096Click
-      TabOrder = 1
-    end
-    object btnExit: TButton
-      Left = 160
-      Height = 65
-      Top = 352
-      Width = 163
-      Caption = 'Quit'
-      OnClick = btnExitClick
-      TabOrder = 2
-    end
+    TitleFont.Height = -27
+    OnDrawCell = StringGridMainDrawCell
+    OnKeyDown = StringGridMainKeyDown
   end
   object MainMenuMain: TMainMenu
-    left = 352
-    top = 65528
+    left = 376
+    top = 24
     object NewGameBtn: TMenuItem
       Caption = 'Новая игра'
-      OnClick = NewGameBtnClick
     end
     object GameModeBtn: TMenuItem
       Caption = 'Выбор режима'
-      OnClick = GameModeBtnClick
     end
     object ExitBtn: TMenuItem
       Caption = 'Выход'
       OnClick = ExitBtnClick
-    end
-    object AboutBTN: TMenuItem
-      Caption = 'Справка'
-      OnClick = AboutBTNClick
     end
   end
 end
